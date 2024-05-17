@@ -1,0 +1,19 @@
+/vendor/
+/node_modules/
+
+# Laravel specific
+.env
+.env.backup
+.env.example
+.env.testing
+.env.dusk.local
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+
+# PhpStorm IDE
+.idea/
+
+# macOS
+.DS_Store

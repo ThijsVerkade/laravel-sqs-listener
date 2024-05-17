@@ -1,0 +1,19 @@
+{
+    "name": "thijs.verkade/laravel-sqs-listener",
+    "autoload": {
+        "psr-4": {
+            "ThijsVerkade\\LaravelSqsListener\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.3",
+        "aws/aws-sdk-php": "^3.307",
+        "illuminate/support": "^11.7",
+        "illuminate/console": "^11.7",
+        "illuminate/queue": "^11.7"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "rector/rector": "^1.0"
+    }
+}
