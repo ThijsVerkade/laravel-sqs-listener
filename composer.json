@@ -1,5 +1,8 @@
 {
     "name": "thijs.verkade/laravel-sqs-listener",
+    "description": "A Laravel package to listen to SQS messages and dispatch them to Laravel jobs",
+    "type": "library",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "ThijsVerkade\\LaravelSqsListener\\": "src/"
@@ -10,6 +13,12 @@
             "Tests\\": "tests/"
         }
     },
+    "authors": [
+        {
+            "name": "Thijs Verkade",
+            "email": "it-solutions-by-thijs@outlook.com"
+        }
+    ],
     "scripts": {
         "code-style": "phpcs --standard=PSR12 -d memory_limit=-1 src tests",
         "code-style:fix": "phpcbf --standard=PSR12 -d memory_limit=-1 src tests",
@@ -39,5 +48,10 @@
         "enlightn/security-checker": "^2.0",
         "phpstan/phpstan-mockery": "^1.1",
         "orchestra/testbench": "^9.3"
+    },
+    "config": {
+        "platform": {
+            "php": "8.3"
+        }
     }
 }
