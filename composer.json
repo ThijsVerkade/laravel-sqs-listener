@@ -5,6 +5,23 @@
             "ThijsVerkade\\LaravelSqsListener\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "code-style": "phpcs --standard=PSR12 -d memory_limit=-1 src tests",
+        "code-style:fix": "phpcbf --standard=PSR12 -d memory_limit=-1 src tests",
+        "static-analysis": "vendor/bin/phpstan analyse --memory-limit=-1",
+        "auto-review": "rector --dry-run",
+        "auto-review:fix": "rector",
+        "vulnerabilities-check": "security-checker security:check",
+        "feature-test": "phpunit  --configuration=phpunit-feature.xml --log-junit=build/feature-test-report.xml --colors=never  --testdox --coverage-html build/Coverage/feature",
+        "feature-test:coverage": "phpunit  --configuration=phpunit-feature.xml --log-junit=build/feature-test-report.xml --colors=never",
+        "unit-test": "phpunit --configuration=phpunit-unit.xml --log-junit=build/unit-test-report.xml --colors=never",
+        "unit-test:coverage": " phpunit --configuration=phpunit-unit.xml --log-junit=build/unit-test-report.xml --colors=never --testdox --coverage-html build/Coverage/unit"
+    },
     "require": {
         "php": "^8.3",
         "aws/aws-sdk-php": "^3.307",
@@ -13,7 +30,14 @@
         "illuminate/queue": "^11.7"
     },
     "require-dev": {
-        "roave/security-advisories": "dev-latest",
-        "rector/rector": "^1.0"
+        "phpunit/phpunit": "^11.1",
+        "mockery/mockery": "^1.6",
+        "fakerphp/faker": "^1.23",
+        "rector/rector": "1.1.0",
+        "phpstan/phpstan": "1.11.5",
+        "squizlabs/php_codesniffer": "^3.10",
+        "enlightn/security-checker": "^2.0",
+        "phpstan/phpstan-mockery": "^1.1",
+        "orchestra/testbench": "^9.3"
     }
 }

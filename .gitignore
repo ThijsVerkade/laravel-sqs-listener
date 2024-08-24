@@ -11,9 +11,11 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+auth.json
 
 # PhpStorm IDE
 .idea/
 
 # macOS
 .DS_Store
+/build/
